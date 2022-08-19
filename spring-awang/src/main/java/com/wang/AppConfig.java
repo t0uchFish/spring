@@ -1,8 +1,9 @@
 package com.wang;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 
 /**
  * @author: wangjingen
@@ -12,6 +13,8 @@ import org.springframework.context.annotation.Configuration;
 
 @ComponentScan("com.wang")
 @Configuration
+@EnableAspectJAutoProxy
+@Import(Wxxx.class)
 public class AppConfig {
 
 	public static void main(String[] args) {
